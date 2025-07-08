@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // checkBox1
