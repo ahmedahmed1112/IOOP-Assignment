@@ -32,8 +32,9 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lnklblForgot_pass = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lblSelectRole
@@ -72,14 +73,14 @@
             this.textBox2.TabIndex = 11;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // label1
+            // lblUsername
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(141, 112);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 17);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "label1";
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Location = new System.Drawing.Point(141, 112);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(69, 17);
+            this.lblUsername.TabIndex = 12;
+            this.lblUsername.Text = "Username";
             // 
             // label2
             // 
@@ -90,13 +91,25 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "Password";
             // 
+            // lnklblForgot_pass
+            // 
+            this.lnklblForgot_pass.AutoSize = true;
+            this.lnklblForgot_pass.Location = new System.Drawing.Point(281, 242);
+            this.lnklblForgot_pass.Name = "lnklblForgot_pass";
+            this.lnklblForgot_pass.Size = new System.Drawing.Size(151, 17);
+            this.lnklblForgot_pass.TabIndex = 15;
+            this.lnklblForgot_pass.TabStop = true;
+            this.lnklblForgot_pass.Text = "Forgot your password?";
+            this.lnklblForgot_pass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // FormRoleSelect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 483);
+            this.Controls.Add(this.lnklblForgot_pass);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnExit);
@@ -113,8 +126,9 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.LinkLabel lnklblForgot_pass;
     }
 }
 
