@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace assignment_test
 {
-    public partial class FormRoleSelect : Form
+    public partial class Form2 : Form
     {
-
-
-        private void lblSelectRole_Click(object sender, EventArgs e)
+        public Form2()
         {
-
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-
-
+            InitializeComponent();
         }
     }
 }
