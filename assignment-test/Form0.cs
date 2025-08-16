@@ -20,17 +20,12 @@ namespace assignment_test
         private void button1_Click(object sender, EventArgs e)
         {
             {
-                var next = new formLogIn();
-                next.FormClosed += (s, args) => this.Show();
+                var next = new Form1();
+                next.FormClosed += (s, args) => this.Close();
                 next.Show();
                 this.Hide();
 
             }
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }
