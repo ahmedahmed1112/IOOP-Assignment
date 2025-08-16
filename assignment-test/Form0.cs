@@ -17,7 +17,7 @@ namespace assignment_test
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnManager_Click(object sender, EventArgs e)
         {
             {
                 var next = new formLogIn();
