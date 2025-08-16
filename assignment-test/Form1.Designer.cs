@@ -1,6 +1,6 @@
 ﻿namespace assignment_test
 {
-    partial class FormRoleSelect
+    partial class formLogIn
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.lblSelectRole = new System.Windows.Forms.Label();
+            this.btnLogIn = new System.Windows.Forms.Button();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lblPassword = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lnklblForgot_pass = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lblSelectRole
@@ -48,74 +48,75 @@
             this.lblSelectRole.Text = "Log In";
             this.lblSelectRole.Click += new System.EventHandler(this.lblSelectRole_Click);
             // 
+            // btnLogIn
+            // 
+            this.btnLogIn.Location = new System.Drawing.Point(539, 255);
+            this.btnLogIn.Name = "btnLogIn";
+            this.btnLogIn.Size = new System.Drawing.Size(68, 30);
+            this.btnLogIn.TabIndex = 9;
+            this.btnLogIn.Text = "Log In";
+            this.btnLogIn.UseVisualStyleBackColor = true;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(336, 68);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(134, 24);
+            this.txtUsername.TabIndex = 10;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(336, 138);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(134, 24);
+            this.txtPassword.TabIndex = 11;
+            this.txtPassword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(524, 349);
+            this.btnExit.Location = new System.Drawing.Point(67, 255);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 9;
+            this.btnExit.Size = new System.Drawing.Size(68, 30);
+            this.btnExit.TabIndex = 16;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // textBox1
+            // lblPassword
             // 
-            this.textBox1.Location = new System.Drawing.Point(284, 109);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(134, 24);
-            this.textBox1.TabIndex = 10;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(284, 180);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(134, 24);
-            this.textBox2.TabIndex = 11;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Location = new System.Drawing.Point(259, 141);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(71, 17);
+            this.lblPassword.TabIndex = 13;
+            this.lblPassword.Text = "Password:";
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(141, 112);
+            this.lblUsername.Location = new System.Drawing.Point(202, 71);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(69, 17);
+            this.lblUsername.Size = new System.Drawing.Size(128, 17);
             this.lblUsername.TabIndex = 12;
-            this.lblUsername.Text = "Username";
+            this.lblUsername.Text = "Username Or Email:";
+            this.lblUsername.Click += new System.EventHandler(this.lblUsername_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(141, 183);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 17);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Password";
-            // 
-            // lnklblForgot_pass
-            // 
-            this.lnklblForgot_pass.AutoSize = true;
-            this.lnklblForgot_pass.Location = new System.Drawing.Point(281, 242);
-            this.lnklblForgot_pass.Name = "lnklblForgot_pass";
-            this.lnklblForgot_pass.Size = new System.Drawing.Size(151, 17);
-            this.lnklblForgot_pass.TabIndex = 15;
-            this.lnklblForgot_pass.TabStop = true;
-            this.lnklblForgot_pass.Text = "Forgot your password?";
-            this.lnklblForgot_pass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // FormRoleSelect
+            // formLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 483);
-            this.Controls.Add(this.lnklblForgot_pass);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.lblUsername);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(704, 313);
             this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.lblUsername);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.btnLogIn);
             this.Controls.Add(this.lblSelectRole);
-            this.Name = "FormRoleSelect";
-            this.Text = "Role Selection";
+            this.Name = "formLogIn";
+            this.Text = "Log In Page";
+            this.Load += new System.EventHandler(this.FormRoleSelect_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,12 +124,12 @@
 
         #endregion
         private System.Windows.Forms.Label lblSelectRole;
+        private System.Windows.Forms.Button btnLogIn;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.LinkLabel lnklblForgot_pass;
     }
 }
 
