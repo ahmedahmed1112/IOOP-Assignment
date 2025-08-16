@@ -49,5 +49,10 @@ namespace assignment_test
         {
 
         }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
