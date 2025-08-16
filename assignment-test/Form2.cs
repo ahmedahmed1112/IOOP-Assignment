@@ -34,5 +34,15 @@ namespace assignment_test
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGoBack_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
