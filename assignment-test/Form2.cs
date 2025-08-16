@@ -24,5 +24,15 @@ namespace assignment_test
         {
 
         }
+
+        private void btnManageUsers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

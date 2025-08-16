@@ -16,5 +16,16 @@ namespace assignment_test
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            {
+                var next = new Form1();
+                next.FormClosed += (s, args) => this.Close();
+                next.Show();
+                this.Hide();
+
+            }
+        }
     }
 }

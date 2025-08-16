@@ -42,12 +42,13 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(221, 32);
+            this.button1.Location = new System.Drawing.Point(131, 74);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(212, 43);
             this.button1.TabIndex = 0;
             this.button1.Text = "Manager";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button5
             // 
@@ -55,7 +56,7 @@
             this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(221, 324);
+            this.button5.Location = new System.Drawing.Point(131, 366);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(212, 44);
             this.button5.TabIndex = 4;
@@ -69,7 +70,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(221, 98);
+            this.button2.Location = new System.Drawing.Point(131, 140);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(212, 43);
             this.button2.TabIndex = 5;
@@ -83,7 +84,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(221, 164);
+            this.button3.Location = new System.Drawing.Point(131, 206);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(212, 43);
             this.button3.TabIndex = 6;
@@ -97,7 +98,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold);
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(221, 225);
+            this.button4.Location = new System.Drawing.Point(131, 267);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(212, 43);
             this.button4.TabIndex = 7;
@@ -109,7 +110,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(703, 429);
+            this.ClientSize = new System.Drawing.Size(515, 485);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);

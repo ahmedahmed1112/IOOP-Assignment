@@ -33,15 +33,13 @@
             this.btnManageUsers = new System.Windows.Forms.Button();
             this.btnManageRecrationFac = new System.Windows.Forms.Button();
             this.btnAssignMaintance = new System.Windows.Forms.Button();
-            this.pnl = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.pnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(439, 198);
+            this.label1.Location = new System.Drawing.Point(621, 305);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 17);
             this.label1.TabIndex = 1;
@@ -49,7 +47,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(483, 325);
+            this.textBox1.Location = new System.Drawing.Point(581, 347);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 24);
             this.textBox1.TabIndex = 2;
@@ -62,13 +60,14 @@
             this.btnManageUsers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnManageUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageUsers.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageUsers.ForeColor = System.Drawing.Color.White;
-            this.btnManageUsers.Location = new System.Drawing.Point(26, 79);
+            this.btnManageUsers.ForeColor = System.Drawing.Color.Black;
+            this.btnManageUsers.Location = new System.Drawing.Point(80, 47);
             this.btnManageUsers.Name = "btnManageUsers";
             this.btnManageUsers.Size = new System.Drawing.Size(193, 29);
             this.btnManageUsers.TabIndex = 4;
             this.btnManageUsers.Text = "Manage User Accounts";
             this.btnManageUsers.UseVisualStyleBackColor = true;
+            this.btnManageUsers.Click += new System.EventHandler(this.btnManageUsers_Click);
             // 
             // btnManageRecrationFac
             // 
@@ -78,12 +77,12 @@
             this.btnManageRecrationFac.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnManageRecrationFac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageRecrationFac.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageRecrationFac.ForeColor = System.Drawing.Color.White;
-            this.btnManageRecrationFac.Location = new System.Drawing.Point(26, 146);
+            this.btnManageRecrationFac.ForeColor = System.Drawing.Color.Black;
+            this.btnManageRecrationFac.Location = new System.Drawing.Point(80, 99);
             this.btnManageRecrationFac.Name = "btnManageRecrationFac";
             this.btnManageRecrationFac.Size = new System.Drawing.Size(193, 29);
             this.btnManageRecrationFac.TabIndex = 5;
-            this.btnManageRecrationFac.Text = "Manage Recration Facilities";
+            this.btnManageRecrationFac.Text = "Manage Facilities";
             this.btnManageRecrationFac.UseVisualStyleBackColor = true;
             // 
             // btnAssignMaintance
@@ -94,26 +93,14 @@
             this.btnAssignMaintance.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnAssignMaintance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAssignMaintance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAssignMaintance.ForeColor = System.Drawing.Color.White;
-            this.btnAssignMaintance.Location = new System.Drawing.Point(26, 209);
+            this.btnAssignMaintance.ForeColor = System.Drawing.Color.Black;
+            this.btnAssignMaintance.Location = new System.Drawing.Point(80, 159);
             this.btnAssignMaintance.Name = "btnAssignMaintance";
             this.btnAssignMaintance.Size = new System.Drawing.Size(193, 32);
             this.btnAssignMaintance.TabIndex = 6;
             this.btnAssignMaintance.Text = "Assign Maintance";
             this.btnAssignMaintance.UseVisualStyleBackColor = true;
             this.btnAssignMaintance.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // pnl
-            // 
-            this.pnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.pnl.Controls.Add(this.button2);
-            this.pnl.Controls.Add(this.btnAssignMaintance);
-            this.pnl.Controls.Add(this.btnManageRecrationFac);
-            this.pnl.Controls.Add(this.btnManageUsers);
-            this.pnl.Location = new System.Drawing.Point(-1, -1);
-            this.pnl.Name = "pnl";
-            this.pnl.Size = new System.Drawing.Size(267, 451);
-            this.pnl.TabIndex = 3;
             // 
             // button2
             // 
@@ -123,12 +110,12 @@
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(26, 268);
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(67, 229);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(193, 32);
+            this.button2.Size = new System.Drawing.Size(229, 42);
             this.button2.TabIndex = 7;
-            this.button2.Text = "Assign Maintance";
+            this.button2.Text = "Review and approve \r\nmaintenance requests";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // formManageUserAccs
@@ -137,14 +124,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pnl);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnManageUsers);
+            this.Controls.Add(this.btnAssignMaintance);
+            this.Controls.Add(this.btnManageRecrationFac);
             this.Name = "formManageUserAccs";
-            this.Text = "Manage User Accounts";
+            this.Text = "Manager Tasks";
             this.Load += new System.EventHandler(this.formManageUserAccs_Load);
-            this.pnl.ResumeLayout(false);
-            this.pnl.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,7 +144,6 @@
         private System.Windows.Forms.Button btnManageUsers;
         private System.Windows.Forms.Button btnManageRecrationFac;
         private System.Windows.Forms.Button btnAssignMaintance;
-        private System.Windows.Forms.Panel pnl;
         private System.Windows.Forms.Button button2;
     }
 }
