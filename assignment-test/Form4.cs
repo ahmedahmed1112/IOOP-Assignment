@@ -26,7 +26,7 @@ namespace assignment_test
         {
             string UniqID = Guid.NewGuid().ToString();
 
-            string forstName = txtFirstName.Text;
+            string firstName = txtFirstName.Text;
             string lastName = txtLastName.Text;
             string phoneNumber = txtPhoneNumber.Text;
             string password = txtPassword.Text;
@@ -37,7 +37,7 @@ namespace assignment_test
                 MessageBox.Show("Passwords do not match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Asia\\source\\repos\\ahmedahmed1112\\IOOP-Assignment\\assignment-test\\Assignment.mdf;Integrated Security=True";
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Ahmad\\source\\repos\\IOOP-Assignment\\assignment-test\\Assignment.mdf;Integrated Security=True";
 
             using (SqlConnection connect = new SqlConnection(connectionString))
             {
@@ -50,7 +50,7 @@ namespace assignment_test
                     string query = "INSERT INTO Manager (ManagerID, FirstName, LastName, PhoneNumber, Password, Role) " +
                                    "VALUES (@Manager, @FirstName, @LastName, @PhoneNumber, @Password, 'Manager')";
                     SqlCommand command = new SqlCommand(query, connect);
-                    command.Parameters.AddWithValue("@FirstName", forstName);
+                    command.Parameters.AddWithValue("@FirstName", firstName);
                     command.Parameters.AddWithValue("@LastName", lastName);
                     command.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
                     command.Parameters.AddWithValue("@Password", password);
@@ -71,7 +71,7 @@ namespace assignment_test
                     string insertQuery = "INSERT INTO Manager (FirstName, LastName, PhoneNumber, Password) VALUES (@FirstName, @LastName, @PhoneNumber, @Password)";
 
                     SqlCommand insertCommand = new SqlCommand(insertQuery, connect);
-                    insertCommand.Parameters.AddWithValue("@FirstName", forstName);
+                    insertCommand.Parameters.AddWithValue("@FirstName", firstName);
                     insertCommand.Parameters.AddWithValue("@LastName", lastName);
                     insertCommand.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
                     insertCommand.Parameters.AddWithValue("@Password", password);

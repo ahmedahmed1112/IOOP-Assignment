@@ -53,7 +53,7 @@ namespace assignment_test
 
             }
 
-                string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Asia\\source\\repos\\ahmedahmed1112\\IOOP-Assignment\\assignment-test\\Assignment.mdf;Integrated Security=True";
+                string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Ahmad\\source\\repos\\IOOP-Assignment\\assignment-test\\Assignment.mdf;Integrated Security=True";
             using (SqlConnection connect = new SqlConnection(connectionString))
             {
                 try

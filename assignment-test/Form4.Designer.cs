@@ -44,9 +44,9 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(267, 41);
+            this.txtFirstName.Location = new System.Drawing.Point(234, 41);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(188, 22);
+            this.txtFirstName.Size = new System.Drawing.Size(165, 24);
             this.txtFirstName.TabIndex = 0;
             this.txtFirstName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -54,7 +54,7 @@
             // 
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstName.Location = new System.Drawing.Point(72, 41);
+            this.lblFirstName.Location = new System.Drawing.Point(63, 41);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(79, 16);
             this.lblFirstName.TabIndex = 1;
@@ -64,7 +64,7 @@
             // 
             this.lblNumber.AutoSize = true;
             this.lblNumber.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumber.Location = new System.Drawing.Point(72, 127);
+            this.lblNumber.Location = new System.Drawing.Point(63, 127);
             this.lblNumber.Name = "lblNumber";
             this.lblNumber.Size = new System.Drawing.Size(105, 16);
             this.lblNumber.TabIndex = 3;
@@ -73,16 +73,16 @@
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(267, 124);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(234, 124);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(188, 22);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(165, 24);
             this.txtPhoneNumber.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(72, 228);
+            this.label2.Location = new System.Drawing.Point(63, 228);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(161, 16);
             this.label2.TabIndex = 7;
@@ -90,16 +90,16 @@
             // 
             // txtConfirmPassword
             // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(267, 221);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(234, 221);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.Size = new System.Drawing.Size(188, 22);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(165, 24);
             this.txtConfirmPassword.TabIndex = 6;
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(72, 175);
+            this.lblPassword.Location = new System.Drawing.Point(63, 175);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(75, 16);
             this.lblPassword.TabIndex = 5;
@@ -107,9 +107,9 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(267, 172);
+            this.txtPassword.Location = new System.Drawing.Point(234, 172);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(188, 22);
+            this.txtPassword.Size = new System.Drawing.Size(165, 24);
             this.txtPassword.TabIndex = 4;
             this.txtPassword.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
@@ -123,9 +123,9 @@
             this.btnGoBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGoBack.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGoBack.ForeColor = System.Drawing.Color.Black;
-            this.btnGoBack.Location = new System.Drawing.Point(14, 342);
+            this.btnGoBack.Location = new System.Drawing.Point(12, 342);
             this.btnGoBack.Name = "btnGoBack";
-            this.btnGoBack.Size = new System.Drawing.Size(120, 35);
+            this.btnGoBack.Size = new System.Drawing.Size(105, 35);
             this.btnGoBack.TabIndex = 10;
             this.btnGoBack.Text = "Go Back";
             this.btnGoBack.UseVisualStyleBackColor = false;
@@ -140,9 +140,9 @@
             this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddUser.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddUser.ForeColor = System.Drawing.Color.Black;
-            this.btnAddUser.Location = new System.Drawing.Point(469, 342);
+            this.btnAddUser.Location = new System.Drawing.Point(410, 342);
             this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(120, 35);
+            this.btnAddUser.Size = new System.Drawing.Size(105, 35);
             this.btnAddUser.TabIndex = 11;
             this.btnAddUser.Text = "Add User";
             this.btnAddUser.UseVisualStyleBackColor = false;
@@ -152,7 +152,7 @@
             // 
             this.lblLastName.AutoSize = true;
             this.lblLastName.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.Location = new System.Drawing.Point(72, 84);
+            this.lblLastName.Location = new System.Drawing.Point(63, 84);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(79, 16);
             this.lblLastName.TabIndex = 13;
@@ -160,17 +160,17 @@
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(267, 81);
+            this.txtLastName.Location = new System.Drawing.Point(234, 81);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(188, 22);
+            this.txtLastName.Size = new System.Drawing.Size(165, 24);
             this.txtLastName.TabIndex = 12;
             // 
             // formAddUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(602, 389);
+            this.ClientSize = new System.Drawing.Size(527, 389);
             this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.btnAddUser);

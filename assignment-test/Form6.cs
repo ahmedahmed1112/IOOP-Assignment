@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace assignment_test
 {
-    public partial class formrFacilitiesManager : Form
+    public partial class formAddFacility : Form
     {
-        public formrFacilitiesManager()
+        public formAddFacility()
         {
             InitializeComponent();
         }

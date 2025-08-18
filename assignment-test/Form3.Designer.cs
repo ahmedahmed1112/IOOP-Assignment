@@ -53,9 +53,9 @@
             this.btnGoBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGoBack.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGoBack.ForeColor = System.Drawing.Color.Black;
-            this.btnGoBack.Location = new System.Drawing.Point(33, 12);
+            this.btnGoBack.Location = new System.Drawing.Point(23, 12);
             this.btnGoBack.Name = "btnGoBack";
-            this.btnGoBack.Size = new System.Drawing.Size(120, 35);
+            this.btnGoBack.Size = new System.Drawing.Size(105, 35);
             this.btnGoBack.TabIndex = 9;
             this.btnGoBack.Text = "Go Back";
             this.btnGoBack.UseVisualStyleBackColor = false;
@@ -69,24 +69,24 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 26;
-            this.dataGridView1.Size = new System.Drawing.Size(787, 222);
+            this.dataGridView1.Size = new System.Drawing.Size(689, 222);
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(8, 24);
+            this.lblSearch.Location = new System.Drawing.Point(7, 24);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(53, 16);
+            this.lblSearch.Size = new System.Drawing.Size(55, 17);
             this.lblSearch.TabIndex = 15;
             this.lblSearch.Text = "Search:";
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(78, 21);
+            this.txtSearch.Location = new System.Drawing.Point(68, 21);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(115, 22);
+            this.txtSearch.Size = new System.Drawing.Size(101, 24);
             this.txtSearch.TabIndex = 16;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -100,9 +100,9 @@
             this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddUser.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddUser.ForeColor = System.Drawing.Color.Black;
-            this.btnAddUser.Location = new System.Drawing.Point(642, 148);
+            this.btnAddUser.Location = new System.Drawing.Point(562, 148);
             this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(113, 36);
+            this.btnAddUser.Size = new System.Drawing.Size(99, 36);
             this.btnAddUser.TabIndex = 17;
             this.btnAddUser.Text = "Add User";
             this.btnAddUser.UseVisualStyleBackColor = false;
@@ -118,9 +118,9 @@
             this.btnDeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteUser.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteUser.ForeColor = System.Drawing.Color.Black;
-            this.btnDeleteUser.Location = new System.Drawing.Point(33, 148);
+            this.btnDeleteUser.Location = new System.Drawing.Point(29, 148);
             this.btnDeleteUser.Name = "btnDeleteUser";
-            this.btnDeleteUser.Size = new System.Drawing.Size(113, 36);
+            this.btnDeleteUser.Size = new System.Drawing.Size(99, 36);
             this.btnDeleteUser.TabIndex = 18;
             this.btnDeleteUser.Text = "Delete User";
             this.btnDeleteUser.UseVisualStyleBackColor = false;
@@ -136,9 +136,9 @@
             this.btnEditUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditUser.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditUser.ForeColor = System.Drawing.Color.Black;
-            this.btnEditUser.Location = new System.Drawing.Point(327, 148);
+            this.btnEditUser.Location = new System.Drawing.Point(286, 148);
             this.btnEditUser.Name = "btnEditUser";
-            this.btnEditUser.Size = new System.Drawing.Size(113, 36);
+            this.btnEditUser.Size = new System.Drawing.Size(99, 36);
             this.btnEditUser.TabIndex = 19;
             this.btnEditUser.Text = "Edit User";
             this.btnEditUser.UseVisualStyleBackColor = false;
@@ -147,9 +147,9 @@
             // lblFilterRole
             // 
             this.lblFilterRole.AutoSize = true;
-            this.lblFilterRole.Location = new System.Drawing.Point(527, 25);
+            this.lblFilterRole.Location = new System.Drawing.Point(461, 25);
             this.lblFilterRole.Name = "lblFilterRole";
-            this.lblFilterRole.Size = new System.Drawing.Size(71, 16);
+            this.lblFilterRole.Size = new System.Drawing.Size(71, 17);
             this.lblFilterRole.TabIndex = 21;
             this.lblFilterRole.Text = "Filter Role:";
             // 
@@ -160,9 +160,9 @@
             this.lstRoles.Items.AddRange(new object[] {
             "Reception",
             "Maintenance Staff"});
-            this.lstRoles.Location = new System.Drawing.Point(635, 25);
+            this.lstRoles.Location = new System.Drawing.Point(556, 25);
             this.lstRoles.Name = "lstRoles";
-            this.lstRoles.Size = new System.Drawing.Size(137, 20);
+            this.lstRoles.Size = new System.Drawing.Size(120, 20);
             this.lstRoles.TabIndex = 22;
             // 
             // panel1
@@ -175,14 +175,14 @@
             this.panel1.Controls.Add(this.lblSearch);
             this.panel1.Location = new System.Drawing.Point(-1, 226);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(787, 65);
+            this.panel1.Size = new System.Drawing.Size(689, 65);
             this.panel1.TabIndex = 23;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(199, 22);
+            this.button1.Location = new System.Drawing.Point(174, 22);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(66, 23);
             this.button1.TabIndex = 23;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
@@ -190,10 +190,10 @@
             // 
             // formManageUsers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(785, 509);
+            this.ClientSize = new System.Drawing.Size(687, 509);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnEditUser);
             this.Controls.Add(this.btnDeleteUser);
