@@ -20,7 +20,7 @@ namespace assignment_test
         private void btnManager_Click(object sender, EventArgs e)
         {
             {
-                var next = new formLogIn();
+                var next = new Form1();
                 next.FormClosed += (s, args) => this.Show();
                 next.Show();
                 this.Hide();
@@ -31,7 +31,7 @@ namespace assignment_test
         private void button2_Click(object sender, EventArgs e)
         {
             {
-                var next = new formLogIn();
+                var next = new Form1();
                 next.FormClosed += (s, args) => this.Show();
                 next.Show();
                 this.Hide();
@@ -43,7 +43,7 @@ namespace assignment_test
         private void button3_Click(object sender, EventArgs e)
         {
             {
-                var next = new formLogIn();
+                var next = new Form1();
                 next.FormClosed += (s, args) => this.Show();
                 next.Show();
                 this.Hide();
@@ -54,7 +54,7 @@ namespace assignment_test
         private void button4_Click(object sender, EventArgs e)
         {
             {
-                var next = new formLogIn();
+                var next = new Form1();
                 next.FormClosed += (s, args) => this.Show();
                 next.Show();
                 this.Hide();
