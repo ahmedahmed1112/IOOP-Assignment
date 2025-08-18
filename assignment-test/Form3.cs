@@ -43,8 +43,8 @@ namespace assignment_test
                     SqlDataAdapter adapter = new SqlDataAdapter(query, connect);
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
-                    dataGridView1.AutoGenerateColumns = true;
-                    dataGridView1.DataSource = dataTable;
+                    DGV_Users.AutoGenerateColumns = true;
+                    DGV_Users.DataSource = dataTable;
 
                     foreach (DataColumn col in dataTable.Columns)
                     {
@@ -94,9 +94,9 @@ namespace assignment_test
 
         private void btnEditUser_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (DGV_Users.SelectedRows.Count > 0)
             {
-                var selectedRow = dataGridView1.SelectedRows[0];
+                var selectedRow = DGV_Users.SelectedRows[0];
                 int userId = Convert.ToInt32(selectedRow.Cells["UserId"].Value);
                 var next = new formEditUser(userId);
                 next.ShowDialog();
@@ -110,9 +110,9 @@ namespace assignment_test
 
         private void btnDeleteUser_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (DGV_Users.SelectedRows.Count > 0)
                 {
-                var selectedRow = dataGridView1.SelectedRows[0];
+                var selectedRow = DGV_Users.SelectedRows[0];
                 int userId = Convert.ToInt32(selectedRow.Cells["UserId"].Value);
                 string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Ahmad\\source\\repos\\IOOP-Assignment\\assignment-test\\Assignment.mdf;Integrated Security=True";
                 using (SqlConnection connect = new SqlConnection(connectionString))
@@ -143,9 +143,9 @@ namespace assignment_test
         {
             string searchKeyword = txtSearch.Text.Trim().ToLower();
 
-            dataGridView1.ClearSelection();
+            DGV_Users.ClearSelection();
 
-            foreach (DataGridViewRow row in dataGridView1.Rows)
+            foreach (DataGridViewRow row in DGV_Users.Rows)
             {
                 if (!row.IsNewRow)
                 {

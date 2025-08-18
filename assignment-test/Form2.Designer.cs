@@ -45,9 +45,9 @@
             this.btnManageUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageUsers.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageUsers.ForeColor = System.Drawing.Color.Black;
-            this.btnManageUsers.Location = new System.Drawing.Point(57, 38);
+            this.btnManageUsers.Location = new System.Drawing.Point(57, 47);
             this.btnManageUsers.Name = "btnManageUsers";
-            this.btnManageUsers.Size = new System.Drawing.Size(197, 42);
+            this.btnManageUsers.Size = new System.Drawing.Size(216, 42);
             this.btnManageUsers.TabIndex = 4;
             this.btnManageUsers.Text = "Manage User Accounts";
             this.btnManageUsers.UseVisualStyleBackColor = false;
@@ -63,9 +63,9 @@
             this.btnManageFacilities.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageFacilities.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageFacilities.ForeColor = System.Drawing.Color.Black;
-            this.btnManageFacilities.Location = new System.Drawing.Point(57, 168);
+            this.btnManageFacilities.Location = new System.Drawing.Point(363, 47);
             this.btnManageFacilities.Name = "btnManageFacilities";
-            this.btnManageFacilities.Size = new System.Drawing.Size(197, 42);
+            this.btnManageFacilities.Size = new System.Drawing.Size(216, 42);
             this.btnManageFacilities.TabIndex = 5;
             this.btnManageFacilities.Text = "Manage Facilities";
             this.btnManageFacilities.UseVisualStyleBackColor = false;
@@ -80,7 +80,7 @@
             this.btnAssignMaintance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAssignMaintance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAssignMaintance.ForeColor = System.Drawing.Color.Black;
-            this.btnAssignMaintance.Location = new System.Drawing.Point(363, 38);
+            this.btnAssignMaintance.Location = new System.Drawing.Point(57, 170);
             this.btnAssignMaintance.Name = "btnAssignMaintance";
             this.btnAssignMaintance.Size = new System.Drawing.Size(216, 42);
             this.btnAssignMaintance.TabIndex = 6;

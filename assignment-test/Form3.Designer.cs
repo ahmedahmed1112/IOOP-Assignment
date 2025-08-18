@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnGoBack = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DGV_Users = new System.Windows.Forms.DataGridView();
             this.lblSearch = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnAddUser = new System.Windows.Forms.Button();
@@ -37,10 +37,10 @@
             this.btnEditUser = new System.Windows.Forms.Button();
             this.lblFilterRole = new System.Windows.Forms.Label();
             this.lstRoles = new System.Windows.Forms.ListBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlSearch = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Users)).BeginInit();
+            this.pnlSearch.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnGoBack
@@ -61,17 +61,17 @@
             this.btnGoBack.UseVisualStyleBackColor = false;
             this.btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
             // 
-            // dataGridView1
+            // DGV_Users
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-1, 290);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 26;
-            this.dataGridView1.Size = new System.Drawing.Size(689, 222);
-            this.dataGridView1.TabIndex = 12;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.DGV_Users.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Users.Location = new System.Drawing.Point(-1, 290);
+            this.DGV_Users.Name = "DGV_Users";
+            this.DGV_Users.RowHeadersVisible = false;
+            this.DGV_Users.RowHeadersWidth = 51;
+            this.DGV_Users.RowTemplate.Height = 26;
+            this.DGV_Users.Size = new System.Drawing.Size(689, 222);
+            this.DGV_Users.TabIndex = 12;
+            this.DGV_Users.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // lblSearch
             // 
@@ -118,7 +118,7 @@
             this.btnDeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteUser.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteUser.ForeColor = System.Drawing.Color.Black;
-            this.btnDeleteUser.Location = new System.Drawing.Point(29, 148);
+            this.btnDeleteUser.Location = new System.Drawing.Point(23, 148);
             this.btnDeleteUser.Name = "btnDeleteUser";
             this.btnDeleteUser.Size = new System.Drawing.Size(99, 36);
             this.btnDeleteUser.TabIndex = 18;
@@ -158,6 +158,7 @@
             this.lstRoles.FormattingEnabled = true;
             this.lstRoles.ItemHeight = 16;
             this.lstRoles.Items.AddRange(new object[] {
+            "",
             "Reception",
             "Maintenance Staff"});
             this.lstRoles.Location = new System.Drawing.Point(556, 25);
@@ -165,18 +166,18 @@
             this.lstRoles.Size = new System.Drawing.Size(120, 20);
             this.lstRoles.TabIndex = 22;
             // 
-            // panel1
+            // pnlSearch
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.txtSearch);
-            this.panel1.Controls.Add(this.lstRoles);
-            this.panel1.Controls.Add(this.lblFilterRole);
-            this.panel1.Controls.Add(this.lblSearch);
-            this.panel1.Location = new System.Drawing.Point(-1, 226);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(689, 65);
-            this.panel1.TabIndex = 23;
+            this.pnlSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.pnlSearch.Controls.Add(this.button1);
+            this.pnlSearch.Controls.Add(this.txtSearch);
+            this.pnlSearch.Controls.Add(this.lstRoles);
+            this.pnlSearch.Controls.Add(this.lblFilterRole);
+            this.pnlSearch.Controls.Add(this.lblSearch);
+            this.pnlSearch.Location = new System.Drawing.Point(-1, 226);
+            this.pnlSearch.Name = "pnlSearch";
+            this.pnlSearch.Size = new System.Drawing.Size(689, 65);
+            this.pnlSearch.TabIndex = 23;
             // 
             // button1
             // 
@@ -194,18 +195,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(687, 509);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlSearch);
             this.Controls.Add(this.btnEditUser);
             this.Controls.Add(this.btnDeleteUser);
             this.Controls.Add(this.btnAddUser);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGV_Users);
             this.Controls.Add(this.btnGoBack);
             this.Name = "formManageUsers";
             this.Text = "Manage Users";
             this.Load += new System.EventHandler(this.formManageUsers_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Users)).EndInit();
+            this.pnlSearch.ResumeLayout(false);
+            this.pnlSearch.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,7 +215,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnGoBack;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGV_Users;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnAddUser;
@@ -222,7 +223,7 @@
         private System.Windows.Forms.Button btnEditUser;
         private System.Windows.Forms.Label lblFilterRole;
         private System.Windows.Forms.ListBox lstRoles;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlSearch;
         private System.Windows.Forms.Button button1;
     }
 }

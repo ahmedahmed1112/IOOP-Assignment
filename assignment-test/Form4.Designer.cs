@@ -32,7 +32,7 @@
             this.lblFirstName = new System.Windows.Forms.Label();
             this.lblNumber = new System.Windows.Forms.Label();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblPasswordConf = new System.Windows.Forms.Label();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -78,15 +78,15 @@
             this.txtPhoneNumber.Size = new System.Drawing.Size(165, 24);
             this.txtPhoneNumber.TabIndex = 2;
             // 
-            // label2
+            // lblPasswordConf
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(63, 228);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 16);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Password Confirmation:";
+            this.lblPasswordConf.AutoSize = true;
+            this.lblPasswordConf.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasswordConf.Location = new System.Drawing.Point(63, 228);
+            this.lblPasswordConf.Name = "lblPasswordConf";
+            this.lblPasswordConf.Size = new System.Drawing.Size(161, 16);
+            this.lblPasswordConf.TabIndex = 7;
+            this.lblPasswordConf.Text = "Password Confirmation:";
             // 
             // txtConfirmPassword
             // 
@@ -175,7 +175,7 @@
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.btnGoBack);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblPasswordConf);
             this.Controls.Add(this.txtConfirmPassword);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.txtPassword);
@@ -196,7 +196,7 @@
         private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.Label lblNumber;
         private System.Windows.Forms.TextBox txtPhoneNumber;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPasswordConf;
         private System.Windows.Forms.TextBox txtConfirmPassword;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtPassword;
