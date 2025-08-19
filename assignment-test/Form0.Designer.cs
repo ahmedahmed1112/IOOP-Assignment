@@ -33,6 +33,7 @@
             this.btnReception = new System.Windows.Forms.Button();
             this.btnStudent = new System.Windows.Forms.Button();
             this.btnMaintenanceStaff = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // btnManager
@@ -109,12 +110,20 @@
             this.btnMaintenanceStaff.UseVisualStyleBackColor = false;
             this.btnMaintenanceStaff.Click += new System.EventHandler(this.btnMaintenanceStaff_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(282, 28);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 24);
+            this.dateTimePicker1.TabIndex = 36;
+            // 
             // Form0
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(515, 485);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnMaintenanceStaff);
             this.Controls.Add(this.btnStudent);
             this.Controls.Add(this.btnReception);
@@ -135,5 +144,6 @@
         private System.Windows.Forms.Button btnReception;
         private System.Windows.Forms.Button btnStudent;
         private System.Windows.Forms.Button btnMaintenanceStaff;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

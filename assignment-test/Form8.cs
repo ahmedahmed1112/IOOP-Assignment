@@ -16,5 +16,10 @@ namespace assignment_test
         {
             InitializeComponent();
         }
+
+        private void Form8_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
