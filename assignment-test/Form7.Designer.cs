@@ -39,8 +39,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.clnScehduleID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnAssignedFacility = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnAssignedStaff = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnStartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnEndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -149,13 +156,67 @@
             this.button1.TabIndex = 33;
             this.button1.Text = "Go Back";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clnScehduleID,
+            this.clnAssignedFacility,
+            this.clnAssignedStaff,
+            this.clnStartDate,
+            this.clnEndDate});
+            this.dataGridView1.Location = new System.Drawing.Point(280, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 26;
+            this.dataGridView1.Size = new System.Drawing.Size(626, 394);
+            this.dataGridView1.TabIndex = 34;
+            // 
+            // clnScehduleID
+            // 
+            this.clnScehduleID.HeaderText = "Scehdule ID";
+            this.clnScehduleID.MinimumWidth = 6;
+            this.clnScehduleID.Name = "clnScehduleID";
+            this.clnScehduleID.Width = 125;
+            // 
+            // clnAssignedFacility
+            // 
+            this.clnAssignedFacility.HeaderText = "Assigned Facility";
+            this.clnAssignedFacility.MinimumWidth = 6;
+            this.clnAssignedFacility.Name = "clnAssignedFacility";
+            this.clnAssignedFacility.Width = 125;
+            // 
+            // clnAssignedStaff
+            // 
+            this.clnAssignedStaff.HeaderText = "Assigned Staff";
+            this.clnAssignedStaff.MinimumWidth = 6;
+            this.clnAssignedStaff.Name = "clnAssignedStaff";
+            this.clnAssignedStaff.Width = 125;
+            // 
+            // clnStartDate
+            // 
+            this.clnStartDate.HeaderText = "Start Date";
+            this.clnStartDate.MinimumWidth = 6;
+            this.clnStartDate.Name = "clnStartDate";
+            this.clnStartDate.Width = 125;
+            // 
+            // clnEndDate
+            // 
+            this.clnEndDate.HeaderText = "End Date";
+            this.clnEndDate.MinimumWidth = 6;
+            this.clnEndDate.Name = "clnEndDate";
+            this.clnEndDate.Width = 125;
             // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(668, 393);
+            this.ClientSize = new System.Drawing.Size(901, 393);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.numericUpDown2);
@@ -171,6 +232,7 @@
             this.Text = "Form7";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,5 +251,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clnScehduleID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clnAssignedFacility;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clnAssignedStaff;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clnStartDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clnEndDate;
     }
 }

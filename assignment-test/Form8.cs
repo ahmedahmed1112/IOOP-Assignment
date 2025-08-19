@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace assignment_test
 {
-    public partial class formrFacilitiesManager : Form
+    public partial class Form8 : Form
     {
-        public formrFacilitiesManager()
+        public Form8()
         {
             InitializeComponent();
-        }
-
-        private void formrFacilitiesManager_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

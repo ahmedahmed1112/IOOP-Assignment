@@ -1,7 +1,14 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="assignment_test.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="C__USERS_AHMAD_SOURCE_REPOS_IOOP_ASSIGNMENT_ASSIGNMENT_TEST_ASSIGNMENT_MDFConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=LAPTOP-7LLUAD3U;Initial Catalog=C:\USERS\AHMAD\SOURCE\REPOS\IOOP-ASSIGNMENT\ASSIGNMENT-TEST\ASSIGNMENT.MDF;Integrated Security=True;TrustServerCertificate=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=LAPTOP-7LLUAD3U;Initial Catalog=C:\USERS\AHMAD\SOURCE\REPOS\IOOP-ASSIGNMENT\ASSIGNMENT-TEST\ASSIGNMENT.MDF;Integrated Security=True;TrustServerCertificate=True</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

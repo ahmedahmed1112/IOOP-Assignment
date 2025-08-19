@@ -1,6 +1,6 @@
 ﻿namespace assignment_test
 {
-    partial class Form1
+    partial class formLogIn
     {
         /// <summary>
         /// Required designer variable.
@@ -41,7 +41,7 @@
             // 
             this.lblSelectRole.AutoSize = true;
             this.lblSelectRole.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectRole.Location = new System.Drawing.Point(349, 9);
+            this.lblSelectRole.Location = new System.Drawing.Point(305, 9);
             this.lblSelectRole.Name = "lblSelectRole";
             this.lblSelectRole.Size = new System.Drawing.Size(75, 24);
             this.lblSelectRole.TabIndex = 8;
@@ -50,9 +50,9 @@
             // 
             // btnLogIn
             // 
-            this.btnLogIn.Location = new System.Drawing.Point(616, 255);
+            this.btnLogIn.Location = new System.Drawing.Point(539, 255);
             this.btnLogIn.Name = "btnLogIn";
-            this.btnLogIn.Size = new System.Drawing.Size(78, 30);
+            this.btnLogIn.Size = new System.Drawing.Size(68, 30);
             this.btnLogIn.TabIndex = 9;
             this.btnLogIn.Text = "Log In";
             this.btnLogIn.UseVisualStyleBackColor = true;
@@ -60,24 +60,24 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(384, 68);
+            this.txtEmail.Location = new System.Drawing.Point(336, 68);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(153, 22);
+            this.txtEmail.Size = new System.Drawing.Size(134, 24);
             this.txtEmail.TabIndex = 10;
             this.txtEmail.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(384, 138);
+            this.txtPassword.Location = new System.Drawing.Point(336, 138);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(153, 22);
+            this.txtPassword.Size = new System.Drawing.Size(134, 24);
             this.txtPassword.TabIndex = 11;
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(77, 255);
+            this.btnExit.Location = new System.Drawing.Point(67, 255);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(78, 30);
+            this.btnExit.Size = new System.Drawing.Size(68, 30);
             this.btnExit.TabIndex = 16;
             this.btnExit.Text = "Back";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -86,27 +86,27 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(296, 141);
+            this.lblPassword.Location = new System.Drawing.Point(259, 141);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(70, 16);
+            this.lblPassword.Size = new System.Drawing.Size(71, 17);
             this.lblPassword.TabIndex = 13;
             this.lblPassword.Text = "Password:";
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(231, 71);
+            this.lblUsername.Location = new System.Drawing.Point(202, 71);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(127, 16);
+            this.lblUsername.Size = new System.Drawing.Size(128, 17);
             this.lblUsername.TabIndex = 12;
             this.lblUsername.Text = "Username Or Email:";
             this.lblUsername.Click += new System.EventHandler(this.lblUsername_Click);
             // 
-            // Form1
+            // formLogIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 313);
+            this.ClientSize = new System.Drawing.Size(704, 313);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
@@ -114,9 +114,9 @@
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btnLogIn);
             this.Controls.Add(this.lblSelectRole);
-            this.Name = "Form1";
+            this.Name = "formLogIn";
             this.Text = "Log In Page";
-            this.Load += new System.EventHandler(this.FormRoleSelect_Load);
+            this.Load += new System.EventHandler(this.formLogIn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

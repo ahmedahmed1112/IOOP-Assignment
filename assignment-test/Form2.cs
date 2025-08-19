@@ -15,7 +15,7 @@ namespace assignment_test
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void btnReviewRequest_click(object sender, EventArgs e)
         {
 
         }
@@ -35,7 +35,7 @@ namespace assignment_test
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnReviewRequest_Click(object sender, EventArgs e)
         {
 
         }

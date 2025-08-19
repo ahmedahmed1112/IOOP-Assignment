@@ -7,12 +7,12 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace assignment_test
 {
-    public partial class Form1 : Form
+    public partial class formLogIn : Form
     {
    
 
 
-        public Form1()
+        public formLogIn()
         {
              
 
@@ -37,7 +37,7 @@ namespace assignment_test
 
         }
 
-        private void FormRoleSelect_Load(object sender, EventArgs e)
+        private void formLogIn_Load(object sender, EventArgs e)
         {
 
         }

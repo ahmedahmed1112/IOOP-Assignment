@@ -205,6 +205,7 @@
             this.Controls.Add(this.DGV_Facility);
             this.Name = "formrFacilitiesManager";
             this.Text = "Facilities Manager";
+            this.Load += new System.EventHandler(this.formrFacilitiesManager_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Facility)).EndInit();
             this.pnlButtons.ResumeLayout(false);
             this.pnlButtons.PerformLayout();

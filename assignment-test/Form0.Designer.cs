@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.btnManager = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.Exit = new System.Windows.Forms.Button();
+            this.btnReception = new System.Windows.Forms.Button();
+            this.btnStudent = new System.Windows.Forms.Button();
+            this.btnMaintenanceStaff = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnManager
@@ -50,64 +50,64 @@
             this.btnManager.UseVisualStyleBackColor = false;
             this.btnManager.Click += new System.EventHandler(this.btnManager_Click);
             // 
-            // button5
+            // Exit
             // 
-            this.button5.BackColor = System.Drawing.Color.Red;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(131, 366);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(212, 44);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Exit";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.Exit.BackColor = System.Drawing.Color.Red;
+            this.Exit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Exit.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Exit.Location = new System.Drawing.Point(131, 366);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(212, 44);
+            this.Exit.TabIndex = 4;
+            this.Exit.Text = "Exit";
+            this.Exit.UseVisualStyleBackColor = false;
+            this.Exit.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button2
+            // btnReception
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(131, 140);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(212, 43);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Reception";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnReception.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnReception.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnReception.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReception.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btnReception.ForeColor = System.Drawing.Color.Black;
+            this.btnReception.Location = new System.Drawing.Point(131, 140);
+            this.btnReception.Name = "btnReception";
+            this.btnReception.Size = new System.Drawing.Size(212, 43);
+            this.btnReception.TabIndex = 5;
+            this.btnReception.Text = "Reception";
+            this.btnReception.UseVisualStyleBackColor = false;
+            this.btnReception.Click += new System.EventHandler(this.btnReception_Click);
             // 
-            // button3
+            // btnStudent
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(131, 206);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(212, 43);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Student";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnStudent.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStudent.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btnStudent.ForeColor = System.Drawing.Color.Black;
+            this.btnStudent.Location = new System.Drawing.Point(131, 206);
+            this.btnStudent.Name = "btnStudent";
+            this.btnStudent.Size = new System.Drawing.Size(212, 43);
+            this.btnStudent.TabIndex = 6;
+            this.btnStudent.Text = "Student";
+            this.btnStudent.UseVisualStyleBackColor = false;
+            this.btnStudent.Click += new System.EventHandler(this.btnStudent_Click);
             // 
-            // button4
+            // btnMaintenanceStaff
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold);
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(131, 267);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(212, 43);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Maintenance Staff ";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnMaintenanceStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnMaintenanceStaff.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnMaintenanceStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaintenanceStaff.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btnMaintenanceStaff.ForeColor = System.Drawing.Color.Black;
+            this.btnMaintenanceStaff.Location = new System.Drawing.Point(131, 267);
+            this.btnMaintenanceStaff.Name = "btnMaintenanceStaff";
+            this.btnMaintenanceStaff.Size = new System.Drawing.Size(212, 43);
+            this.btnMaintenanceStaff.TabIndex = 7;
+            this.btnMaintenanceStaff.Text = "Maintenance Staff ";
+            this.btnMaintenanceStaff.UseVisualStyleBackColor = false;
+            this.btnMaintenanceStaff.Click += new System.EventHandler(this.btnMaintenanceStaff_Click);
             // 
             // Form0
             // 
@@ -115,14 +115,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(515, 485);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnMaintenanceStaff);
+            this.Controls.Add(this.btnStudent);
+            this.Controls.Add(this.btnReception);
+            this.Controls.Add(this.Exit);
             this.Controls.Add(this.btnManager);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Form0";
             this.Text = "Form0";
+            this.Load += new System.EventHandler(this.Form0_Load);
             this.ResumeLayout(false);
 
         }
@@ -130,9 +131,9 @@
         #endregion
 
         private System.Windows.Forms.Button btnManager;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button Exit;
+        private System.Windows.Forms.Button btnReception;
+        private System.Windows.Forms.Button btnStudent;
+        private System.Windows.Forms.Button btnMaintenanceStaff;
     }
 }

@@ -38,7 +38,7 @@
             this.lblFilterRole = new System.Windows.Forms.Label();
             this.lstRoles = new System.Windows.Forms.ListBox();
             this.pnlSearch = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Users)).BeginInit();
             this.pnlSearch.SuspendLayout();
             this.SuspendLayout();
@@ -152,6 +152,7 @@
             this.lblFilterRole.Size = new System.Drawing.Size(71, 17);
             this.lblFilterRole.TabIndex = 21;
             this.lblFilterRole.Text = "Filter Role:";
+            this.lblFilterRole.Click += new System.EventHandler(this.lblFilterRole_Click);
             // 
             // lstRoles
             // 
@@ -165,11 +166,12 @@
             this.lstRoles.Name = "lstRoles";
             this.lstRoles.Size = new System.Drawing.Size(120, 20);
             this.lstRoles.TabIndex = 22;
+            this.lstRoles.SelectedIndexChanged += new System.EventHandler(this.lstRoles_SelectedIndexChanged);
             // 
             // pnlSearch
             // 
             this.pnlSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.pnlSearch.Controls.Add(this.button1);
+            this.pnlSearch.Controls.Add(this.btnSearch);
             this.pnlSearch.Controls.Add(this.txtSearch);
             this.pnlSearch.Controls.Add(this.lstRoles);
             this.pnlSearch.Controls.Add(this.lblFilterRole);
@@ -178,16 +180,17 @@
             this.pnlSearch.Name = "pnlSearch";
             this.pnlSearch.Size = new System.Drawing.Size(689, 65);
             this.pnlSearch.TabIndex = 23;
+            this.pnlSearch.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSearch_Paint);
             // 
-            // button1
+            // btnSearch
             // 
-            this.button1.Location = new System.Drawing.Point(174, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(66, 23);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSearch.Location = new System.Drawing.Point(174, 22);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(66, 23);
+            this.btnSearch.TabIndex = 23;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // formManageUsers
             // 
@@ -224,6 +227,6 @@
         private System.Windows.Forms.Label lblFilterRole;
         private System.Windows.Forms.ListBox lstRoles;
         private System.Windows.Forms.Panel pnlSearch;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

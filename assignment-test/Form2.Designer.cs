@@ -86,7 +86,7 @@
             this.btnAssignMaintance.TabIndex = 6;
             this.btnAssignMaintance.Text = "Assign Maintance";
             this.btnAssignMaintance.UseVisualStyleBackColor = false;
-            this.btnAssignMaintance.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnAssignMaintance.Click += new System.EventHandler(this.btnReviewRequest_click);
             // 
             // btnReviewRequest
             // 
@@ -104,7 +104,7 @@
             this.btnReviewRequest.TabIndex = 7;
             this.btnReviewRequest.Text = "Review and approve \r\nmaintenance requests";
             this.btnReviewRequest.UseVisualStyleBackColor = false;
-            this.btnReviewRequest.Click += new System.EventHandler(this.button2_Click);
+            this.btnReviewRequest.Click += new System.EventHandler(this.btnReviewRequest_Click);
             // 
             // btnGoBack
             // 

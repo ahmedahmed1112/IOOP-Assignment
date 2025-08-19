@@ -115,10 +115,22 @@
     <Compile Include="Form7.Designer.cs">
       <DependentUpon>Form7.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form8.Designer.cs">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </Compile>
     <Compile Include="formEditUser.cs" />
     <Compile Include="FormRoleSelect.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="_C__USERS_AHMAD_SOURCE_REPOS_IOOP_ASSIGNMENT_ASSIGNMENT_TEST_ASSIGNMENT_MDFDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_C__USERS_AHMAD_SOURCE_REPOS_IOOP_ASSIGNMENT_ASSIGNMENT_TEST_ASSIGNMENT_MDFDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form0.resx">
       <DependentUpon>Form0.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +155,9 @@
     <EmbeddedResource Include="Form7.resx">
       <DependentUpon>Form7.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form8.resx">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -162,18 +177,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="_C__USERS_AHMAD_SOURCE_REPOS_IOOP_ASSIGNMENT_ASSIGNMENT_TEST_ASSIGNMENT_MDFDataSet.xsc">
+      <DependentUpon>_C__USERS_AHMAD_SOURCE_REPOS_IOOP_ASSIGNMENT_ASSIGNMENT_TEST_ASSIGNMENT_MDFDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_C__USERS_AHMAD_SOURCE_REPOS_IOOP_ASSIGNMENT_ASSIGNMENT_TEST_ASSIGNMENT_MDFDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_C__USERS_AHMAD_SOURCE_REPOS_IOOP_ASSIGNMENT_ASSIGNMENT_TEST_ASSIGNMENT_MDFDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_C__USERS_AHMAD_SOURCE_REPOS_IOOP_ASSIGNMENT_ASSIGNMENT_TEST_ASSIGNMENT_MDFDataSet.xss">
+      <DependentUpon>_C__USERS_AHMAD_SOURCE_REPOS_IOOP_ASSIGNMENT_ASSIGNMENT_TEST_ASSIGNMENT_MDFDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assignment.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <Content Include="Assignment_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <DependentUpon>Assignment.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

@@ -20,7 +20,7 @@ namespace assignment_test
         private void btnManager_Click(object sender, EventArgs e)
         {
             {
-                var next = new Form1();
+                var next = new formLogIn();
                 next.FormClosed += (s, args) => this.Show();
                 next.Show();
                 this.Hide();
@@ -28,10 +28,10 @@ namespace assignment_test
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnReception_Click(object sender, EventArgs e)
         {
             {
-                var next = new Form1();
+                var next = new formLogIn();
                 next.FormClosed += (s, args) => this.Show();
                 next.Show();
                 this.Hide();
@@ -40,10 +40,10 @@ namespace assignment_test
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnStudent_Click(object sender, EventArgs e)
         {
             {
-                var next = new Form1();
+                var next = new formLogIn();
                 next.FormClosed += (s, args) => this.Show();
                 next.Show();
                 this.Hide();
@@ -51,10 +51,10 @@ namespace assignment_test
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnMaintenanceStaff_Click(object sender, EventArgs e)
         {
             {
-                var next = new Form1();
+                var next = new formLogIn();
                 next.FormClosed += (s, args) => this.Show();
                 next.Show();
                 this.Hide();
@@ -65,6 +65,11 @@ namespace assignment_test
         private void button5_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Form0_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

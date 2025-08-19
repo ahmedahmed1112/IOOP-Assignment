@@ -16,5 +16,15 @@ namespace assignment_test
         {
             InitializeComponent();
         }
+
+        private void formAddFacility_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddFacility_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

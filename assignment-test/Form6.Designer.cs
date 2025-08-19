@@ -75,6 +75,7 @@
             this.btnAddFacility.TabIndex = 23;
             this.btnAddFacility.Text = "Add Facility";
             this.btnAddFacility.UseVisualStyleBackColor = false;
+            this.btnAddFacility.Click += new System.EventHandler(this.btnAddFacility_Click);
             // 
             // btnGoBack
             // 
@@ -181,6 +182,7 @@
             this.Controls.Add(this.txtFirstName);
             this.Name = "formAddFacility";
             this.Text = "Add Facility";
+            this.Load += new System.EventHandler(this.formAddFacility_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

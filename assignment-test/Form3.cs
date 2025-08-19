@@ -167,10 +167,25 @@ namespace assignment_test
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
             string keyword = txtSearch.Text.Trim();
             LoadUsers(keyword); 
+        }
+
+        private void pnlSearch_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lstRoles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFilterRole_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
