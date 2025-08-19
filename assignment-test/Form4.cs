@@ -8,14 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace assignment_test
 {
     public partial class formAddUser : Form
     {
-        public formAddUser()
+        private readonly Manager _manager;
+        private readonly string _role;
+        public formAddUser(Manager manager, string role)
         {
             InitializeComponent();
+            _manager = manager;
+            _role = string.IsNullOrWhiteSpace(role) ? "reception" : role.ToLower();
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -24,84 +31,71 @@ namespace assignment_test
         }
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            string UniqID = Guid.NewGuid().ToString();
-
-            string firstName = txtFirstName.Text;
-            string lastName = txtLastName.Text;
-            string phoneNumber = txtPhoneNumber.Text;
-            string password = txtPassword.Text;
-            string confirmPassword = txtConfirmPassword.Text;
-
-            if (password != confirmPassword)
+            try
             {
-                MessageBox.Show("Passwords do not match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Ahmad\\source\\repos\\IOOP-Assignment\\assignment-test\\Assignment.mdf;Integrated Security=True";
+                var first = (txtFirstName.Text ?? "").Trim();
+                var last = (txtLastName.Text ?? "").Trim();
+                var phone = string.IsNullOrWhiteSpace(txtPhoneNumber.Text) ? null : txtPhoneNumber.Text.Trim();
+                var pass = (txtPassword.Text ?? "").Trim();
+                var pass2 = (txtConfirmPassword.Text ?? "").Trim();
 
-            using (SqlConnection connect = new SqlConnection(connectionString))
+                if (first.Length == 0 || last.Length == 0)
+                {
+                    MessageBox.Show("First and last name are required.", "Missing info",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (pass.Length == 0)
+                {
+                    MessageBox.Show("Password is required.", "Missing info",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (!string.Equals(pass, pass2, StringComparison.Ordinal))
+                {
+                    MessageBox.Show("Password confirmation does not match.", "Check password",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Build full name
+                var fullName = $"{first} {last}".Trim();
+
+                // Explicitly specify null for the optional userId parameter to resolve ambiguity
+                var newId = _manager.ManageStaffAccount(
+                    operation: "add",
+                    userId: (int?)null, // Explicitly cast to nullable int
+                    fullName: fullName,
+                    email: null,             // you don't collect email on this form
+                    password: pass,
+                    phoneNumber: phone,      // may be null
+                    role: _role              // "reception" or "maintenance"
+                );
+
+                MessageBox.Show("User added successfully.", "Success",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Tell the parent to refresh
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            catch (Exception ex)
             {
-                try
-                {
-                    connect.Open();
-
-                    // Check if the user already exists
-                    string checkQuery = "SELECT COUNT(*) FROM Manager WHERE FirstName = @FirstName AND LastName = @LastName";
-                    string query = "INSERT INTO Manager (ManagerID, FirstName, LastName, PhoneNumber, Password, Role) " +
-                                   "VALUES (@Manager, @FirstName, @LastName, @PhoneNumber, @Password, 'Manager')";
-                    SqlCommand command = new SqlCommand(query, connect);
-                    command.Parameters.AddWithValue("@FirstName", firstName);
-                    command.Parameters.AddWithValue("@LastName", lastName);
-                    command.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
-                    command.Parameters.AddWithValue("@Password", password);
-                    command.Parameters.AddWithValue("@Manager", UniqID);
-
-
-                    int count = (int)command.ExecuteNonQuery();
-                    if (count > 0)
-                    {
-                        // User added successfully
-                    }
-                    else
-                    {
-                        MessageBox.Show("User already exists.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-
-                    string insertQuery = "INSERT INTO Manager (FirstName, LastName, PhoneNumber, Password) VALUES (@FirstName, @LastName, @PhoneNumber, @Password)";
-
-                    SqlCommand insertCommand = new SqlCommand(insertQuery, connect);
-                    insertCommand.Parameters.AddWithValue("@FirstName", firstName);
-                    insertCommand.Parameters.AddWithValue("@LastName", lastName);
-                    insertCommand.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
-                    insertCommand.Parameters.AddWithValue("@Password", password);
-                    insertCommand.Parameters.AddWithValue("@ConfirmPassword", confirmPassword);
-                    insertCommand.ExecuteNonQuery();
-
-                    int rows = insertCommand.ExecuteNonQuery();
-
-                    if (rows > 0)
-                    {
-
-
-                        MessageBox.Show("User added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close(); // Close the form after successful addition
-                    }
-                    else
-                    {
-                        MessageBox.Show("Failed to add user.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                    }
-                }
-                catch (Exception ex) {
-                    MessageBox.Show("Error adding user: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    connect.Close();
-                }
+                MessageBox.Show("Failed to add user: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }   
+        }
+        private void ClearInputs()
+        {
+            txtFirstName.Clear();
+            txtLastName.Clear();
+            txtPhoneNumber.Clear();
+            txtPassword.Clear();
+            txtConfirmPassword.Clear();
+            txtFirstName.Focus();
+        }
 
 
 
@@ -113,6 +107,16 @@ namespace assignment_test
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGoBack_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void formAddUser_Load(object sender, EventArgs e)
         {
 
         }

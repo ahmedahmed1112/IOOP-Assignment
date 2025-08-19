@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using System.Drawing.Text;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Configuration;
 
 
 namespace assignment_test
@@ -44,53 +45,59 @@ namespace assignment_test
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            string email = txtEmail.Text;
+            string email = txtEmail.Text.Trim();
             string password = txtPassword.Text;
+
             if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
             {
-                MessageBox.Show("Please enter both Email and Password.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter both Email and Password.", "Warning",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
-
             }
 
-                string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Ahmad\\source\\repos\\IOOP-Assignment\\assignment-test\\Assignment.mdf;Integrated Security=True";
-            using (SqlConnection connect = new SqlConnection(connectionString))
+            string cs = @"Data Source=LAPTOP-7LLUAD3U;Initial Catalog=BBBBADR;Integrated Security=True";
+
+            using (var conn = new SqlConnection(cs))
             {
                 try
                 {
-                    connect.Open();
-                    string query = "SELECT COUNT(*) FROM Manager WHERE email  = @email  AND Password = @Password";
-                    SqlCommand conn = new SqlCommand(query, connect);
+                    conn.Open();
 
-                    conn.Parameters.AddWithValue("@email", email);
-                    conn.Parameters.AddWithValue("@Password", password);
+                    string sql = @"SELECT TOP 1 [ManagerID]
+                           FROM [Manager]
+                           WHERE [Email] = @Email AND [Password] = @Password";
 
-                    int count = (int)conn.ExecuteScalar();
-
-                    if (count > 0)
+                    using (var cmd = new SqlCommand(sql, conn))
                     {
-                       // MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        // Proceed to the next form or functionality
-                        var next = new formManageUsers();
-                        next.FormClosed += (s, args) => this.Show();
-                        next.FormClosed += (s, args) => this.Show();
-                        next.Show();
+                        cmd.Parameters.AddWithValue("@Email", email);
+                        cmd.Parameters.AddWithValue("@Password", password);
+
+                        object result = cmd.ExecuteScalar();
+
+                        if (result == null || result == DBNull.Value)
+                        {
+                            MessageBox.Show("Invalid username or password. Please try again.", "Login Failed",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+
+                        
+                        string managerId = result.ToString();
+
+                        
+                        var manager = new Manager { ManagerId = managerId };
+
+                        
+                        var hub = new formManageUserAccs(manager);
+                        hub.FormClosed += (s, args) => this.Show();  
                         this.Hide();
-                    }
-                    else
-                    {
-                        // User does not exist, show error message
-                        MessageBox.Show("Invalid username or password. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        hub.Show();
                     }
                 }
-
                 catch (SqlException ex)
                 {
-                    MessageBox.Show("An error occurred while connecting to the database: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    connect.Close();
+                    MessageBox.Show("An error occurred while connecting to the database: " + ex.Message,
+                        "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

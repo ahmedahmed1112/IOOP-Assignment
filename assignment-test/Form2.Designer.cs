@@ -69,6 +69,7 @@
             this.btnManageFacilities.TabIndex = 5;
             this.btnManageFacilities.Text = "Manage Facilities";
             this.btnManageFacilities.UseVisualStyleBackColor = false;
+            this.btnManageFacilities.Click += new System.EventHandler(this.btnManageFacilities_Click);
             // 
             // btnAssignMaintance
             // 

@@ -34,12 +34,6 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.DGV_Facility = new System.Windows.Forms.DataGridView();
-            this.clnFacility = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnUniversity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnRatePerHour = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlButtons = new System.Windows.Forms.Panel();
             this.btnGoBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Facility)).BeginInit();
@@ -52,11 +46,12 @@
             this.lblSearch.BackColor = System.Drawing.Color.Transparent;
             this.lblSearch.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearch.ForeColor = System.Drawing.Color.White;
-            this.lblSearch.Location = new System.Drawing.Point(26, 31);
+            this.lblSearch.Location = new System.Drawing.Point(22, 25);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(65, 18);
+            this.lblSearch.Size = new System.Drawing.Size(52, 14);
             this.lblSearch.TabIndex = 0;
             this.lblSearch.Text = "Search:";
+            this.lblSearch.Click += new System.EventHandler(this.lblSearch_Click);
             // 
             // btnAdd
             // 
@@ -64,18 +59,21 @@
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(663, 23);
+            this.btnAdd.Location = new System.Drawing.Point(568, 19);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(78, 31);
+            this.btnAdd.Size = new System.Drawing.Size(67, 25);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(97, 30);
+            this.txtSearch.Location = new System.Drawing.Point(83, 24);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(131, 24);
+            this.txtSearch.Size = new System.Drawing.Size(113, 20);
             this.txtSearch.TabIndex = 2;
             // 
             // btnEdit
@@ -84,12 +82,14 @@
             this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(555, 23);
+            this.btnEdit.Location = new System.Drawing.Point(476, 19);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(78, 31);
+            this.btnEdit.Size = new System.Drawing.Size(67, 25);
             this.btnEdit.TabIndex = 3;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -97,72 +97,27 @@
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(444, 23);
+            this.btnDelete.Location = new System.Drawing.Point(381, 19);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(78, 31);
+            this.btnDelete.Size = new System.Drawing.Size(67, 25);
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // DGV_Facility
             // 
             this.DGV_Facility.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Facility.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clnFacility,
-            this.clnName,
-            this.clnUniversity,
-            this.clnType,
-            this.clnLocation,
-            this.clnRatePerHour});
-            this.DGV_Facility.Location = new System.Drawing.Point(0, 157);
+            this.DGV_Facility.Location = new System.Drawing.Point(0, 128);
+            this.DGV_Facility.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DGV_Facility.Name = "DGV_Facility";
             this.DGV_Facility.RowHeadersVisible = false;
             this.DGV_Facility.RowHeadersWidth = 51;
             this.DGV_Facility.RowTemplate.Height = 26;
-            this.DGV_Facility.Size = new System.Drawing.Size(754, 251);
+            this.DGV_Facility.Size = new System.Drawing.Size(646, 204);
             this.DGV_Facility.TabIndex = 5;
-            // 
-            // clnFacility
-            // 
-            this.clnFacility.HeaderText = "FacilityID";
-            this.clnFacility.MinimumWidth = 6;
-            this.clnFacility.Name = "clnFacility";
-            this.clnFacility.Width = 125;
-            // 
-            // clnName
-            // 
-            this.clnName.HeaderText = "Name";
-            this.clnName.MinimumWidth = 6;
-            this.clnName.Name = "clnName";
-            this.clnName.Width = 125;
-            // 
-            // clnUniversity
-            // 
-            this.clnUniversity.HeaderText = "University";
-            this.clnUniversity.MinimumWidth = 6;
-            this.clnUniversity.Name = "clnUniversity";
-            this.clnUniversity.Width = 125;
-            // 
-            // clnType
-            // 
-            this.clnType.HeaderText = "Type";
-            this.clnType.MinimumWidth = 6;
-            this.clnType.Name = "clnType";
-            this.clnType.Width = 125;
-            // 
-            // clnLocation
-            // 
-            this.clnLocation.HeaderText = "Location";
-            this.clnLocation.MinimumWidth = 6;
-            this.clnLocation.Name = "clnLocation";
-            this.clnLocation.Width = 125;
-            // 
-            // clnRatePerHour
-            // 
-            this.clnRatePerHour.HeaderText = "Rate Per Hour";
-            this.clnRatePerHour.MinimumWidth = 6;
-            this.clnRatePerHour.Name = "clnRatePerHour";
-            this.clnRatePerHour.Width = 125;
+            this.DGV_Facility.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Facility_CellContentClick);
             // 
             // pnlButtons
             // 
@@ -172,9 +127,10 @@
             this.pnlButtons.Controls.Add(this.btnAdd);
             this.pnlButtons.Controls.Add(this.btnEdit);
             this.pnlButtons.Controls.Add(this.btnDelete);
-            this.pnlButtons.Location = new System.Drawing.Point(0, 73);
+            this.pnlButtons.Location = new System.Drawing.Point(0, 59);
+            this.pnlButtons.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlButtons.Name = "pnlButtons";
-            this.pnlButtons.Size = new System.Drawing.Size(754, 85);
+            this.pnlButtons.Size = new System.Drawing.Size(646, 69);
             this.pnlButtons.TabIndex = 6;
             // 
             // btnGoBack
@@ -187,22 +143,25 @@
             this.btnGoBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGoBack.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGoBack.ForeColor = System.Drawing.Color.Black;
-            this.btnGoBack.Location = new System.Drawing.Point(12, 12);
+            this.btnGoBack.Location = new System.Drawing.Point(10, 10);
+            this.btnGoBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGoBack.Name = "btnGoBack";
-            this.btnGoBack.Size = new System.Drawing.Size(105, 35);
+            this.btnGoBack.Size = new System.Drawing.Size(90, 28);
             this.btnGoBack.TabIndex = 10;
             this.btnGoBack.Text = "Go Back";
             this.btnGoBack.UseVisualStyleBackColor = false;
+            this.btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
             // 
             // formrFacilitiesManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(750, 406);
+            this.ClientSize = new System.Drawing.Size(643, 330);
             this.Controls.Add(this.btnGoBack);
             this.Controls.Add(this.pnlButtons);
             this.Controls.Add(this.DGV_Facility);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "formrFacilitiesManager";
             this.Text = "Facilities Manager";
             this.Load += new System.EventHandler(this.formrFacilitiesManager_Load);
@@ -224,11 +183,5 @@
         private System.Windows.Forms.DataGridView DGV_Facility;
         private System.Windows.Forms.Panel pnlButtons;
         private System.Windows.Forms.Button btnGoBack;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clnFacility;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clnName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clnUniversity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clnType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clnLocation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clnRatePerHour;
     }
 }

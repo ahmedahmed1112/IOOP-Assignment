@@ -1,21 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace assignment_test
 {
     public partial class formManageUsers : Form
     {
-        public formManageUsers()
+        private readonly Manager _manager;
+        private readonly string _connStr =
+    System.Configuration.ConfigurationManager.ConnectionStrings["AssignmentDB"].ConnectionString;
+
+
+        public formManageUsers(Manager manager)
         {
             InitializeComponent();
+            _manager = manager;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -29,49 +36,8 @@ namespace assignment_test
         }
 
 
-        private void LoadUsers(string Keyword ="")
-        {
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Asia\\source\\repos\\ahmedahmed1112\\IOOP-Assignment\\assignment-test\\Assignment.mdf;Integrated Security=True";
-            using (SqlConnection connect = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    connect.Open();
-                    //MessageBox.Show("Connection succeeded");
-
-                    string query = "SELECT * FROM Manager";
-                    SqlDataAdapter adapter = new SqlDataAdapter(query, connect);
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-                    DGV_Users.AutoGenerateColumns = true;
-                    DGV_Users.DataSource = dataTable;
-
-                    foreach (DataColumn col in dataTable.Columns)
-                    {
-                    }
-
-                    if (!string.IsNullOrWhiteSpace(Keyword))
-                    {
-                        query += " WHERE ManagerId LIKE @Keyword OR Name LIKE @Keyword OR Email LIKE @Keyword";
-                    }
-
-                    if(string.IsNullOrWhiteSpace(Keyword))
-                    {
-                        Keyword = "%";
-                    }
-                    else
-                    {
-                        Keyword = "%" + Keyword + "%";
-                    }
-
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error loading users: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
+        
+        
 
         private void formManageUsers_Load(object sender, EventArgs e)
         {
@@ -85,10 +51,13 @@ namespace assignment_test
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            var next = new formAddUser();
-            next.ShowDialog();
+            using (var next = new formAddUser(_manager, "reception"))  // or "maintenance"
+            {
+                next.ShowDialog();
+            }
+           
 
-            LoadUsers();    
+               
 
         }
 
@@ -97,80 +66,120 @@ namespace assignment_test
             if (DGV_Users.SelectedRows.Count > 0)
             {
                 var selectedRow = DGV_Users.SelectedRows[0];
-                int userId = Convert.ToInt32(selectedRow.Cells["UserId"].Value);
+                int userId = Convert.ToInt32(selectedRow.Cells["user_id"].Value); // <-- fix here
                 var next = new formEditUser(userId);
                 next.ShowDialog();
                 LoadUsers();
             }
             else
             {
-                MessageBox.Show("Please select a user to edit.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a user to edit.", "Warning",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void btnDeleteUser_Click(object sender, EventArgs e)
         {
-            if (DGV_Users.SelectedRows.Count > 0)
-                {
-                var selectedRow = DGV_Users.SelectedRows[0];
-                int userId = Convert.ToInt32(selectedRow.Cells["UserId"].Value);
-                string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Ahmad\\source\\repos\\IOOP-Assignment\\assignment-test\\Assignment.mdf;Integrated Security=True";
-                using (SqlConnection connect = new SqlConnection(connectionString))
-                {
-                    try
-                    {
-                        connect.Open();
-                        string query = "DELETE FROM Manager WHERE UserId = @UserId";
-                        SqlCommand command = new SqlCommand(query, connect);
-                        command.Parameters.AddWithValue("@UserId", userId);
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("User deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        LoadUsers();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error deleting user: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
-            else
+            if (DGV_Users.CurrentRow == null)
             {
-                MessageBox.Show("Please select a user to delete.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Select a user row first.");
+                return;
+            }
+
+            var cell = DGV_Users.CurrentRow.Cells["user_id"].Value;
+            if (cell == null || cell == DBNull.Value)
+            {
+                MessageBox.Show("Could not read user_id from selection.");
+                return;
+            }
+
+            int id = Convert.ToInt32(cell);
+
+            // confirm
+            if (MessageBox.Show($"Delete user #{id}?", "Confirm", MessageBoxButtons.YesNo) != DialogResult.Yes)
+                return;
+
+            try
+            {
+                _manager.ManageStaffAccount(operation: "delete", userId: id);
+                MessageBox.Show("User deleted.");
+                LoadUsers();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            string searchKeyword = txtSearch.Text.Trim().ToLower();
-
-            DGV_Users.ClearSelection();
+            string term = (txtSearch.Text ?? "").Trim().ToLower();
 
             foreach (DataGridViewRow row in DGV_Users.Rows)
             {
-                if (!row.IsNewRow)
-                {
-                    string name =row.Cells["Name"].Value.ToString().ToLower();
-                    string email = row.Cells["Email"].Value.ToString().ToLower();
+                if (row.IsNewRow) continue;
 
-                    if ((string.IsNullOrEmpty(name) && string.IsNullOrEmpty(email)) || 
-                        name.Contains(searchKeyword) || 
-                        email.Contains(searchKeyword))
-                    {
-                        row.Selected = true;
-                    }
-                    else
-                    {
-                        row.Selected = false;
-                    }
-                }
-               
+                string name = row.Cells["full_name"].Value?.ToString().ToLower() ?? "";
+                string email = row.Cells["email"].Value?.ToString().ToLower() ?? "";
+
+                // show only matching rows
+                row.Visible = term == "" || name.Contains(term) || email.Contains(term);
             }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string keyword = txtSearch.Text.Trim();
-            LoadUsers(keyword); 
+            LoadUsers();
+        }
+        private void LoadUsers(string roleFilter = null, string search = null)
+        {
+            using (var conn = new SqlConnection(_connStr))
+            using (var da = new SqlDataAdapter(@"
+SELECT u.user_id,
+       u.full_name,
+       u.email,
+       u.phone_number,
+       u.user_role
+FROM (
+    SELECT
+        ReceptionID                          AS user_id,
+        (FirstName + ' ' + LastName)         AS full_name,
+        ISNULL(Email,'')                     AS email,
+        ISNULL(Phone,'')                     AS phone_number,
+        'reception'                          AS user_role
+    FROM Reception
+
+    UNION ALL
+
+    SELECT
+        MaintenanceID                        AS user_id,
+        (FirstName + ' ' + LastName)         AS full_name,
+        ISNULL(Email,'')                     AS email,
+        ISNULL(Phone,'')                     AS phone_number,
+        'maintenance'                        AS user_role
+    FROM MaintenanceStaff
+) u
+WHERE (@role IS NULL OR u.user_role = @role)
+  AND (@q IS NULL OR @q = '' OR
+       u.user_id     LIKE '%'+@q+'%' OR
+       u.full_name   LIKE '%'+@q+'%' OR
+       u.email       LIKE '%'+@q+'%' OR
+       u.phone_number LIKE '%'+@q+'%')
+ORDER BY u.user_id DESC;", conn))
+            {
+                da.SelectCommand.Parameters.AddWithValue("@role", (object)roleFilter ?? DBNull.Value);
+                da.SelectCommand.Parameters.AddWithValue("@q", (object)search ?? DBNull.Value);
+
+                var dt = new DataTable();
+                da.Fill(dt);
+                DGV_Users.DataSource = dt;
+            }
+
+            // optional: set headers once
+            if (DGV_Users.Columns.Contains("full_name"))
+                DGV_Users.Columns["full_name"].HeaderText = "Name";
+            if (DGV_Users.Columns.Contains("phone_number"))
+                DGV_Users.Columns["phone_number"].HeaderText = "Phone";
         }
 
         private void pnlSearch_Paint(object sender, PaintEventArgs e)
