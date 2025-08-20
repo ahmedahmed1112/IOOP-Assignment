@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace assignment_test
 {
-    public partial class Form7 : Form
+    public partial class formAssignMaintenance : Form
     {
         private readonly Manager _manager;
-        public Form7(Manager manager)
+        public formAssignMaintenance(Manager manager)
         {
             InitializeComponent();
             _manager = manager;
@@ -24,17 +24,17 @@ namespace assignment_test
         {
             // Facilities
             var fdt = _manager.GetFacilities();       // must return FacilityID, Name
-            lstRoles.DisplayMember = "Name";
-            lstRoles.ValueMember = "FacilityID";
-            lstRoles.DataSource = fdt;
+            lstFacility.DisplayMember = "Name";
+            lstFacility.ValueMember = "FacilityID";
+            lstFacility.DataSource = fdt;
 
             // Staff
             var sdt = _manager.GetMaintenanceStaff(); // must return MaintenanceID, FullName
-            listBox1.DisplayMember = "FullName";
-            listBox1.ValueMember = "MaintenanceID";
-            listBox1.DataSource = sdt;
+            lstMaintenanceStaff.DisplayMember = "FullName";
+            lstMaintenanceStaff.ValueMember = "MaintenanceID";
+            lstMaintenanceStaff.DataSource = sdt;
 
-            dateTimePicker1.Value = DateTime.Today;
+            DTPStartDate.Value = DateTime.Today;
         }
         private void LoadSchedules()
         {
@@ -54,19 +54,19 @@ namespace assignment_test
         }
 
         // 🔥 Add this method — Designer is expecting it
-        private void Form7_Load(object sender, EventArgs e)
+        private void formAssignMaintenance_Load(object sender, EventArgs e)
         {
             LoadSchedules();
             LoadLookups();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnAddSchedule_Click(object sender, EventArgs e)
         {
             try
             {
                 // Try SelectedValue first; if null, use Text
-                string facilityId = (lstRoles.SelectedValue as string) ?? lstRoles.Text?.Trim();
-                string staffId = (listBox1.SelectedValue as string) ?? listBox1.Text?.Trim();
+                string facilityId = (lstFacility.SelectedValue as string) ?? lstFacility.Text?.Trim();
+                string staffId = (lstMaintenanceStaff.SelectedValue as string) ?? lstMaintenanceStaff.Text?.Trim();
 
                 if (string.IsNullOrWhiteSpace(facilityId))
                 {
@@ -82,12 +82,12 @@ namespace assignment_test
                     return;
                 }
 
-                DateTime startDate = dateTimePicker1.Value.Date;
+                DateTime startDate = DTPStartDate.Value.Date;
                 DateTime? endDate = (numericUpDown2.Value > 0)
                     ? startDate.AddDays((int)numericUpDown2.Value)
                     : (DateTime?)null;
 
-                string task = textBox1.Text.Trim();
+                string task = txtTask.Text.Trim();
                 if (string.IsNullOrWhiteSpace(task)) task = "(no task)";
 
                 // Use the real logged-in manager id if you have it
@@ -114,9 +114,39 @@ namespace assignment_test
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnGoBack_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFacility_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstFacility_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstMaintenanceStaff_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTask_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

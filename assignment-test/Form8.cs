@@ -29,15 +29,15 @@ namespace assignment_test
         {
             try
             {
-                string statusFilter = textBox1.Text.Trim(); // Status:
+                string statusFilter = txtSearchReqID.Text.Trim(); // Status:
                 string idLike = lstStatus.Text.Trim(); // Search RequestID:
 
-                dataGridView1.DataSource = _mgr.Requests_List(statusFilter, idLike);
+                DGV_ReviewRequests.DataSource = _mgr.Requests_List(statusFilter, idLike);
 
-                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                dataGridView1.ReadOnly = true;
-                dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                dataGridView1.MultiSelect = false;
+                DGV_ReviewRequests.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                DGV_ReviewRequests.ReadOnly = true;
+                DGV_ReviewRequests.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                DGV_ReviewRequests.MultiSelect = false;
             }
             catch (Exception ex)
             {
@@ -54,6 +54,16 @@ namespace assignment_test
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void DGV_ReviewRequests_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtSearchReqID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

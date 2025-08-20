@@ -30,12 +30,12 @@
         {
             this.btnSearchRequestID = new System.Windows.Forms.Button();
             this.lblStatus = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DGV_ReviewRequests = new System.Windows.Forms.DataGridView();
             this.lstStatus = new System.Windows.Forms.ListBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnGoBack = new System.Windows.Forms.Button();
             this.lblSearchRequestID = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtSearchReqID = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_ReviewRequests)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSearchRequestID
@@ -61,17 +61,18 @@
             this.lblStatus.TabIndex = 1;
             this.lblStatus.Text = "Status:";
             // 
-            // dataGridView1
+            // DGV_ReviewRequests
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(213, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 26;
-            this.dataGridView1.Size = new System.Drawing.Size(645, 340);
-            this.dataGridView1.TabIndex = 3;
+            this.DGV_ReviewRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_ReviewRequests.Location = new System.Drawing.Point(213, 0);
+            this.DGV_ReviewRequests.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DGV_ReviewRequests.Name = "DGV_ReviewRequests";
+            this.DGV_ReviewRequests.RowHeadersVisible = false;
+            this.DGV_ReviewRequests.RowHeadersWidth = 51;
+            this.DGV_ReviewRequests.RowTemplate.Height = 26;
+            this.DGV_ReviewRequests.Size = new System.Drawing.Size(645, 340);
+            this.DGV_ReviewRequests.TabIndex = 3;
+            this.DGV_ReviewRequests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_ReviewRequests_CellContentClick);
             // 
             // lstStatus
             // 
@@ -87,24 +88,24 @@
             this.lstStatus.Size = new System.Drawing.Size(103, 17);
             this.lstStatus.TabIndex = 24;
             // 
-            // button2
+            // btnGoBack
             // 
-            this.button2.AutoSize = true;
-            this.button2.BackColor = System.Drawing.Color.Tomato;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(10, 304);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 28);
-            this.button2.TabIndex = 34;
-            this.button2.Text = "Go Back";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnGoBack.AutoSize = true;
+            this.btnGoBack.BackColor = System.Drawing.Color.Tomato;
+            this.btnGoBack.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnGoBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnGoBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnGoBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGoBack.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGoBack.ForeColor = System.Drawing.Color.Black;
+            this.btnGoBack.Location = new System.Drawing.Point(10, 304);
+            this.btnGoBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGoBack.Name = "btnGoBack";
+            this.btnGoBack.Size = new System.Drawing.Size(90, 28);
+            this.btnGoBack.TabIndex = 34;
+            this.btnGoBack.Text = "Go Back";
+            this.btnGoBack.UseVisualStyleBackColor = false;
+            this.btnGoBack.Click += new System.EventHandler(this.button2_Click);
             // 
             // lblSearchRequestID
             // 
@@ -115,13 +116,14 @@
             this.lblSearchRequestID.TabIndex = 35;
             this.lblSearchRequestID.Text = "Search RequestID:";
             // 
-            // textBox1
+            // txtSearchReqID
             // 
-            this.textBox1.Location = new System.Drawing.Point(10, 115);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(103, 20);
-            this.textBox1.TabIndex = 36;
+            this.txtSearchReqID.Location = new System.Drawing.Point(10, 115);
+            this.txtSearchReqID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSearchReqID.Name = "txtSearchReqID";
+            this.txtSearchReqID.Size = new System.Drawing.Size(103, 20);
+            this.txtSearchReqID.TabIndex = 36;
+            this.txtSearchReqID.TextChanged += new System.EventHandler(this.txtSearchReqID_TextChanged);
             // 
             // Form8
             // 
@@ -129,18 +131,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(858, 342);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSearchReqID);
             this.Controls.Add(this.lblSearchRequestID);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnGoBack);
             this.Controls.Add(this.lstStatus);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGV_ReviewRequests);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.btnSearchRequestID);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form8";
-            this.Text = "Form8";
+            this.Text = "Review Maintenance Requests";
             this.Load += new System.EventHandler(this.Form8_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_ReviewRequests)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,10 +152,10 @@
 
         private System.Windows.Forms.Button btnSearchRequestID;
         private System.Windows.Forms.Label lblStatus;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGV_ReviewRequests;
         private System.Windows.Forms.ListBox lstStatus;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnGoBack;
         private System.Windows.Forms.Label lblSearchRequestID;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSearchReqID;
     }
 }

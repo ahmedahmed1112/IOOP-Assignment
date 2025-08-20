@@ -36,6 +36,7 @@
             this.DGV_Facility = new System.Windows.Forms.DataGridView();
             this.pnlButtons = new System.Windows.Forms.Panel();
             this.btnGoBack = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Facility)).BeginInit();
             this.pnlButtons.SuspendLayout();
             this.SuspendLayout();
@@ -75,6 +76,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(113, 20);
             this.txtSearch.TabIndex = 2;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // btnEdit
             // 
@@ -122,6 +124,7 @@
             // pnlButtons
             // 
             this.pnlButtons.BackColor = System.Drawing.Color.Blue;
+            this.pnlButtons.Controls.Add(this.btnSearch);
             this.pnlButtons.Controls.Add(this.txtSearch);
             this.pnlButtons.Controls.Add(this.lblSearch);
             this.pnlButtons.Controls.Add(this.btnAdd);
@@ -151,6 +154,20 @@
             this.btnGoBack.Text = "Go Back";
             this.btnGoBack.UseVisualStyleBackColor = false;
             this.btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.White;
+            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(202, 24);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(52, 22);
+            this.btnSearch.TabIndex = 5;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
             // formrFacilitiesManager
             // 
@@ -183,5 +200,6 @@
         private System.Windows.Forms.DataGridView DGV_Facility;
         private System.Windows.Forms.Panel pnlButtons;
         private System.Windows.Forms.Button btnGoBack;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

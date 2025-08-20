@@ -47,7 +47,7 @@ namespace assignment_test
         // Assign Maintenance
         private void btnAssignMaintance_Click(object sender, EventArgs e)
         {
-            var f = new Form7(_manager);  
+            var f = new formAssignMaintenance(_manager);  
             f.FormClosed += (s, args) => this.Show();
             this.Hide();
             f.Show();
